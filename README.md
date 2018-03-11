@@ -22,3 +22,11 @@ My timing is 850ms
 I did not optimize this.
 Any misimplementations are not intentional
 
+## Installing
+`yarn` or `npm -i`
+
+## running
+`yarn nps` or `npm nps`
+
+note the url from webpack dev server and open it
+
