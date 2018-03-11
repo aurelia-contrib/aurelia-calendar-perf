@@ -1,0 +1,20 @@
+<template>
+  <require from="./app-calendar.css"></require>
+  <require from="./app-calendar-cell"></require>
+  <div class="calendar">
+    <button class="btn" if.bind="!isLoaded" click.delegate="load()">Load</button>
+    <button class="btn" if.bind="isLoaded" click.delegate="searchAll()">Search all month</button>
+    <table if.bind="isLoaded">
+      <tr>
+        <th repeat.for="day of days" class="day-header" click.delegate="dayHeaderClicked(day)">
+          ${day}
+        </th>
+      </tr>
+      <tr repeat.for="hour of hours">
+        <td repeat.for="day of days" class="hour-cell">
+          <app-calendar-cell hour.bind="hour" day.bind="day"></app-calendar-cell>
+        </td>
+      </tr>
+    </table>
+  </div>
+</template>
